@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-------->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .navMenu {
+        font-family: "Advent Pro", sans-serif;
+        padding: 8px;
+        text-align: center;
+        margin: 7px auto;
+        width: fit-content;
+      }
+
+      .navMenu a {
+        color: #272727;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 6px;
+      }
+
+      .background {
+        background-color: #ece5f0;
+      }
+
+      .border {
+        border: 1px solid #cccccc;
+      }
+
+      .navMenu a:hover {
+        color: #d09c0b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navMenu border">
+      <a id="home" onclick="navigate(this.id)" href="#">
+        <i class="fa-solid fa-house"></i> Home</a
+      >
+      <a id="knowledge" onclick="navigate(this.id)" href="#">
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i> knowledge</a
+      >
+      <a id="books" onclick="navigate(this.id)" href="#">
+        <i class="fa-solid fa-books"></i> Books</a
+      >
+      <a id="goals" onclick="navigate(this.id)" href="#">
+        <i class="fa-solid fa-bullseye"></i> Goals</a
+      >
+      <a id="tasks" onclick="navigate(this.id)" href="#">
+        <i class="fa-solid fa-ballot-check"></i> Tasks</a
+      >
+    </nav>
+
+    <script>
+      let direction = "horizontal";
+      if (direction === "vertical") {
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`
+        );
+      }
+
+      function navigate(id) {
+        if (id == "home")
+          window
+            .open(
+              "https://www.notion.so/Home-f71d7c9dc71747d2937ab0191e13d3cb?pvs=4",
+              "_blank"
+            )
+            .focus();
+        else if (id == "knowledge")
+          window
+            .open(
+              "https://www.notion.so/Knowledge-Hub-78fe9ae345e74185acf55db447d91d64?pvs=4",
+              "_blank"
+            )
+            .focus();
+        else if (id == "books")
+          window
+            .open(
+              "https://www.notion.so/Book-Cave-cc1b2ff683cc4c4387b2e8f20fda8492?pvs=4",
+              "_blank"
+            )
+            .focus();
+        else if (id == "goals")
+          window
+            .open(
+              "https://www.notion.so/Goal-Planner-82a14b8acfc8489b952659fef68f9ab3?pvs=4",
+              "_blank"
+            )
+            .focus();
+        else if (id == "tasks")
+          window
+            .open(
+              "https://www.notion.so/Task-Planner-f4a738d421be4a2ca9775ed9bc29be82?pvs=4",
+              "_blank"
+            )
+            .focus();
+      }
+    </script>
+  </body>
+</html>
